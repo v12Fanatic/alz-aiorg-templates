@@ -20,7 +20,7 @@ jobs:
   plan:
     name: Plan with Terraform
     runs-on:
-      self-hosted
+      ubuntu-latest
     concurrency: aiorg-tfstate
     environment: alz-aiorg-plan
     permissions:
@@ -94,7 +94,7 @@ jobs:
     needs: plan
     name: Apply with Terraform
     runs-on:
-      self-hosted
+      ubuntu-latest
     concurrency: aiorg-tfstate
     environment: alz-aiorg-apply
     permissions:

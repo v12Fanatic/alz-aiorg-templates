@@ -16,7 +16,7 @@ jobs:
   validate:
     name: Validate Terraform
     runs-on:
-      ubuntu-latest
+      self-hosted
     environment: alz-aiorg-plan
     steps:
       - name: Checkout Code
@@ -52,7 +52,7 @@ jobs:
     name: Validate Terraform Plan
     needs: validate
     runs-on:
-      ubuntu-latest
+      self-hosted
     concurrency: aiorg-tfstate
     environment: alz-aiorg-plan
     permissions:
